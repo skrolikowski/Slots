@@ -4,6 +4,7 @@ document.body.onload = () => new Game();
 import { Timer } from './utils'
 import { Grid } from './terms'
 import { Stage, Ticker, TickerEvent } from 'createjs-module';
+import TWEEN from '@tweenjs/tween.js';
 
 export class Game
 {
@@ -38,8 +39,10 @@ export class Game
         Ticker.on("tick", (ev:any) => {
             let event:TickerEvent = ev as TickerEvent;
             
+            
             if (!this.IsPaused) {
                 this._stage.update();
+                TWEEN.update();
                 this.Timer.Update(event.delta);
             }
         });

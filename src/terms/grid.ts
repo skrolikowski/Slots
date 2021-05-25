@@ -1,5 +1,5 @@
 import { Container, Point, Shadow, Shape } from 'createjs-module';
-import { Colors, Reel, Symbols } from '.';
+import { Colors, Reel } from '.';
 import { Game } from '../main';
 
 export default class Grid extends Container
@@ -55,12 +55,11 @@ export default class Grid extends Container
     {
         if (this._isSpinning)
         {
-            Game.Instance.Timer.After(0.1, () => this._reels[0].SpinStop([11,12,13]));
-            Game.Instance.Timer.After(0.3, () => this._reels[1].SpinStop([11,12,13]));
-            Game.Instance.Timer.After(0.3, () => this._reels[2].SpinStop([11,12,13]));
-            Game.Instance.Timer.After(0.3, () => this._reels[3].SpinStop([11,12,13]));
-            Game.Instance.Timer.After(0.5, () => this._reels[4].SpinStop([11,12,13]));
-
+            Game.Instance.Timer.After(0.1, () => this._reels[0].SpinStop([0,1,2]));
+            Game.Instance.Timer.After(0.3, () => this._reels[1].SpinStop([0,1,2]));
+            Game.Instance.Timer.After(0.3, () => this._reels[2].SpinStop([0,1,2]));
+            Game.Instance.Timer.After(0.3, () => this._reels[3].SpinStop([0,1,2]));
+            Game.Instance.Timer.After(0.5, () => this._reels[4].SpinStop([0,1,2]));
         } else {
             Game.Instance.Timer.After(0.1, () => this._reels[0].SpinStart());
             Game.Instance.Timer.After(0.3, () => this._reels[1].SpinStart());

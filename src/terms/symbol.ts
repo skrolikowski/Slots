@@ -27,9 +27,9 @@ export default class Symbol extends Container
         this.Refresh();
     }
 
-    public SetSymbol(symbol:number = -1):void
+    public SetSymbol(symbol:number|null = null):void
     {
-        if (symbol == -1) {
+        if (symbol == null) {
             symbol = Math.floor(Math.random() * Symbols.length);
         }
 
@@ -54,7 +54,7 @@ export default class Symbol extends Container
             .endFill();
 
         let symbolText:Text = new Text();
-        symbolText.text = this._symbol.toString();
+        symbolText.text = Symbols[this._symbol];
         symbolText.font = "bold 36px Arial";
         symbolText.color = Colors.WHITE;
         symbolText.textAlign = "center";
