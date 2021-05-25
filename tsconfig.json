@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target":"ES5",
+        "module": "CommonJS",
+        "outDir":"dist",
+        // "outFile": "dist/bundle.js",
+        // "listFiles": true,
+        "removeComments": true,
+        "allowJs":true,
+        "strict": true,
+        "sourceMap": true,
+        "moduleResolution": "node"
+    },
+    "include": [ "src/**/*" ],
+    "exclude": [ "node_modules" ]
+}
